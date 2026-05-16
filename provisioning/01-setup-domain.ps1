@@ -1,4 +1,4 @@
-# 1. Set a static IP Address (matches our architecture blueprint)
+# 1. Setting a static IP Address (matches our architecture blueprint)
 $NetAdapter = Get-NetAdapter | Where-Object {$_.Status -eq "Up"}
 New-NetIPAddress -InterfaceIndex $NetAdapter.InterfaceIndex -IPAddress "10.0.0.10" -PrefixLength 24 -DefaultGateway "10.0.0.1"
 Set-DnsClientServerAddress -InterfaceIndex $NetAdapter.InterfaceIndex -ServerAddresses "127.0.0.1"
