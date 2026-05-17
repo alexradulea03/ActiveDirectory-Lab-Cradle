@@ -1,4 +1,4 @@
-#🛑 Network Store Cache Corruption (PersistentStore)
+# Network Store Cache Corruption (PersistentStore)
 
 The Issue: High-level PowerShell provisioning cmdlets failed to pass static configurations, throwing interface exceptions due to a corrupted network configurations store cache within the client image (AddressState: Invalid inside the PersistentStore).
 
@@ -10,7 +10,7 @@ netsh interface ipv4 set address name="Ethernet" static 10.0.0.50 255.255.255.0 
 netsh interface ipv4 set dns name="Ethernet" static 10.0.0.10
 ```
 
-#🛑 Kerberos Time Skew Mismatches
+# Kerberos Time Skew Mismatches
 
 The Issue: Network communications and DNS routing were functional, yet domain joining failed with a cryptic The request is not supported block. System tracing proved the local time service (w32time) was unable to fetch NTP sync data from the DC due to implicit endpoint firewall filters.
 
@@ -20,7 +20,7 @@ The Resolution: Active Directory strictly enforces a maximum 5-minute time skew 
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name "LmCompatibilityLevel" -Value 5 -Type DWord
 ```
 
-#🛑 OS Edition Capabilities Constraint
+# OS Edition Capabilities Constraint
 
 The Issue: The Domain association toggle within the system core parameters (sysdm.cpl) was completely greyed out on the endpoint machine.
 
