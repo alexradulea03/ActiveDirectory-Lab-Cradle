@@ -10,8 +10,10 @@ Follow these steps precisely to prepare and join a Windows client workstation to
 
 ### Step 2: System Capability Upgrade
 Open **PowerShell as an Administrator** and execute the following to verify or force the operating system feature upgrade to Windows Pro:
+
 ```powershell
 Changepk.exe /ProductKey VK7JG-NPHTM-C97JM-9MPGT-3V66T
+```
 
 ### Step 3: Local Network Stack Init.
 
